@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ギャラリー｜YAMADA TARO</title>
+  <style>
+    body {
+      font-family: 'Yu Gothic', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #00539C;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav li {
+      margin: 0 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #00539C;
+      font-weight: bold;
+    }
+    .gallery-container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-item {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform .2s;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item .caption {
+      padding: .5rem;
+      text-align: center;
+      font-size: .9rem;
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #00539C;
+      color: #fff;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ギャラリー</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="gallery.html">ギャラリー</a></li>
+    </ul>
+  </nav>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="images/photo1.jpg" alt="写真1">
+      <div class="caption">キャプション1</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo2.jpg" alt="写真2">
+      <div class="caption">キャプション2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo3.jpg" alt="写真3">
+      <div class="caption">キャプション3</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo4.jpg" alt="写真4">
+      <div class="caption">キャプション4</div>
+    </div>
+    <!-- 追加したい画像があれば、同様に .gallery-item をコピーして増やしてください -->
+  </div>
+
+  <footer>
+    &copy; 2025 YAMADA TARO All Rights Reserved.
+  </footer>
+
+</body>
+</html>
