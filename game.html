@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>的あてゲーム（カスタム画像）</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f2f2f2;
+    }
+    #game-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 1rem auto;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      overflow: hidden;
+    }
+    .target {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+    #score {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    #start-btn {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>的あてゲーム（カスタム画像）</h1>
+  <div id="game-container"></div>
+  <div id="score">スコア: 0</div>
+  <button id="start-btn">ゲームスタート</button>
+
+  <script>
+    const container = document.getElementById('game-container');
+    const scoreDisplay = document.getElementById('score');
+    const startBtn = document.getElementById('start-btn');
+
+    let score = 0;
+    let gameInterval;
+    let targetElem;
+
+    function createTarget() {
+      // 既存の的を削除
+      if (targetElem) targetElem.remove();
+
+      // 画像要素を作成
+      const img = document.createElement('img');
+      img.src = 'target.jpg';
+      img.classList.add('target');
+      img.style.width = '50px';
+      img.style.height = '50px';
+
+      // ランダムな位置
+      const maxX = container.clientWidth - 50;
+      const maxY = container.clientHeight - 50;
+      img.style.left = Math.random() * maxX + 'px';
+      img.style.top = Math.random() * maxY + 'px';
+
+      // クリック時の挙動
+      img.addEventListener('click', () => {
+        score++;
+        scoreDisplay.textContent = 'スコア: ' + score;
+        createTarget();
+      });
+
+      container.appendChild(img);
+      targetElem = img;
+    }
+
+    function startGame() {
+      score = 0;
+      scoreDisplay.textContent = 'スコア: 0';
+      startBtn.disabled = true;
+      createTarget();
+      gameInterval = setInterval(createTarget, 1000);
+
+      setTimeout(() => {
+        clearInterval(gameInterval);
+        if (targetElem) targetElem.remove();
+        startBtn.disabled = false;
+        alert('ゲーム終了！ あなたのスコアは ' + score + ' 点でした！');
+      }, 30000);
+    }
+
+    startBtn.addEventListener('click', startGame);
+  </script>
+
+</body>
+</html>
