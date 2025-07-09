@@ -1,0 +1,147 @@
+<!-- style.css: 全ファイル共通デザイン用 -->
+/* ベースリセット */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+header, footer { background-color: #00539C; color: #fff; padding: 1rem; }
+nav a { color: #fff; margin-right: 1rem; text-decoration: none; }
+main { padding: 2rem; max-width: 960px; margin: auto; }
+h1, h2, h3, h4 { color: #00539C; margin-bottom: 1rem; }
+a { color: #00539C; text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, .btn { display: inline-block; padding: 0.5rem 1rem; background-color: #00539C; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+button:hover, .btn:hover { background-color: #004080; }
+/* ギャラリー用 */
+.gallery-item { margin: 1rem; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+/* ゲーム用 */
+#game-canvas { display: block; margin: auto; border: 2px solid #333; background: #000; }
+
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>トップページ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="galley.html">Galley</a>
+      <a href="game.html">Game</a>
+      <a href="game2.html">Game2</a>
+    </nav>
+  </header>
+  <main>
+    <section class="container">
+      <h2 id="hero-title"></h2>
+      <p>ここにイントロダクションテキスト。</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+  <script src="js/typing.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+<!-- galley.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ギャラリー</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>ギャラリー</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="galley.html">Galley</a>
+      <a href="game.html">Game</a>
+      <a href="game2.html">Game2</a>
+    </nav>
+  </header>
+  <main>
+    <div class="gallery-item">
+      <img src="images/photo1.jpg" alt="Photo1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo2.jpg" alt="Photo2">
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+</body>
+</html>
+
+<!-- game.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ゲーム</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Canvas Game</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="galley.html">Galley</a>
+      <a href="game.html">Game</a>
+      <a href="game2.html">Game2</a>
+    </nav>
+  </header>
+  <main>
+    <canvas id="game-canvas" width="800" height="600"></canvas>
+  </main>
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+  <script src="js/game.js"></script>
+</body>
+</html>
+
+<!-- game2.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ゲーム2</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Canvas Game 2</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="galley.html">Galley</a>
+      <a href="game.html">Game</a>
+      <a href="game2.html">Game2</a>
+    </nav>
+  </header>
+  <main>
+    <canvas id="game-canvas" width="600" height="400"></canvas>
+  </main>
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+  <script src="js/game2.js"></script>
+</body>
+</html>
