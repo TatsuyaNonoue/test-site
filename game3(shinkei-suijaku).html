@@ -46,6 +46,7 @@
     <ul>
       <li><a href="index.html">ホーム</a></li>
       <li><a href="game.html">ゲームコーナー</a></li>
+       <li><a href="game2.html">ゲームコーナーver2</a></li>
     </ul>
   </nav>
   <h1>神経衰弱ゲーム</h1>
@@ -54,15 +55,9 @@
   <div class="message" id="message"></div>
   <script>
     // 画像URLを8種2枚ずつ用意（計16枚）
-    const imageUrls = [
-      'https://github.com/RyotaKamishima/test-site/blob/039668a619293a5864f04f2492d90698a33f19a3/2114ac40-1485-43b2-8cab-78f09c8794c9.jpg',
-      'https://github.com/RyotaKamishima/test-site/blob/039668a619293a5864f04f2492d90698a33f19a3/2091abe7-566d-4c5b-9ee2-cecd34441a90.jpg',
-      'https://github.com/RyotaKamishima/test-site/blob/039668a619293a5864f04f2492d90698a33f19a3/2617ae40-ead9-4798-ad27-cae35a0b31fe.jpg',
-      'https://github.com/RyotaKamishima/test-site/blob/039668a619293a5864f04f2492d90698a33f19a3/51c58993-51c8-46eb-8de0-a487f0e7c697.jpg',
-      'https://github.com/RyotaKamishima/test-site/blob/039668a619293a5864f04f2492d90698a33f19a3/a8a3059b-879f-4e57-8d73-b49be95eb924.jpg',
-      'https://github.com/RyotaKamishima/test-site/blob/039668a619293a5864f04f2492d90698a33f19a3/97fe92a6-0cb5-487f-9a71-0e17123e1860.jpg',
-      'https://github.com/RyotaKamishima/test-site/blob/039668a619293a5864f04f2492d90698a33f19a3/913a7951-f008-43c2-a5f6-a550fbbb7466.jpg',
-      'https://github.com/RyotaKamishima/test-site/blob/039668a619293a5864f04f2492d90698a33f19a3/eb96e028-3403-4e53-b539-1fca994f07e5.jpg'
+    const imageFiles = [
+      '2114ac40-1485-43b2-8cab-78f09c8794c9.jpg', '2091abe7-566d-4c5b-9ee2-cecd34441a90.jpg', '2617ae40-ead9-4798-ad27-cae35a0b31fe.jpg', '51c58993-51c8-46eb-8de0-a487f0e7c697.jpg',
+      'a8a3059b-879f-4e57-8d73-b49be95eb924.jpg', '97fe92a6-0cb5-487f-9a71-0e17123e1860.jpg', '913a7951-f008-43c2-a5f6-a550fbbb7466.jpg', 'eb96e028-3403-4e53-b539-1fca994f07e5.jpg'
     ];
     let cards = [];
     let firstCard = null;
